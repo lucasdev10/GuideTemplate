@@ -1,0 +1,73 @@
+:root {
+  /** primary **/
+  --color-primary: #10359c;
+  --color-primary-rgb: 247, 247, 247;
+  --color-primary-contrast: #000000;
+  --color-primary-contrast-rgb: 0, 0, 0;
+  --color-primary-shade: #213469;
+  --color-primary-tint: #354d8d;
+
+  /** secondary **/
+  --color-secondary: #80072f;
+  --color-secondary-rgb: 61, 194, 255;
+  --color-secondary-contrast: #ffffff;
+  --color-secondary-contrast-rgb: 255, 255, 255;
+  --color-secondary-shade: #aa3059;
+  --color-secondary-tint: #802140;
+
+  /** tertiary **/
+  --color-tertiary: #3ea12c;
+  --color-tertiary-rgb: 103, 172, 91;
+  --color-tertiary-contrast: #000000;
+  --color-tertiary-contrast-rgb: 0, 0, 0;
+  --color-tertiary-shade: #5b9750;
+  --color-tertiary-tint: #76b46b;
+
+  /** success **/
+  --color-success: #46be31;
+  --color-success-rgb: 103, 172, 91;
+  --color-success-contrast: #000000;
+  --color-success-contrast-rgb: 0, 0, 0;
+  --color-success-shade: #5b9750;
+  --color-success-tint: #76b46b;
+
+  /** warning **/
+  --color-warning: #f3bd40;
+  --color-warning-rgb: 246, 193, 68;
+  --color-warning-contrast: #000000;
+  --color-warning-contrast-rgb: 0, 0, 0;
+  --color-warning-shade: #d8aa3c;
+  --color-warning-tint: #f7c757;
+
+  /** danger **/
+  --color-danger: #ee5241;
+  --color-danger-rgb: 226, 81, 65;
+  --color-danger-contrast: #ffffff;
+  --color-danger-contrast-rgb: 255, 255, 255;
+  --color-danger-shade: #c74739;
+  --color-danger-tint: #e56254;
+
+  /** dark **/
+  --color-dark: #000000;
+  --color-dark-rgb: 34, 36, 40;
+  --color-dark-contrast: #ffffff;
+  --color-dark-contrast-rgb: 255, 255, 255;
+  --color-dark-shade: #1e2023;
+  --color-dark-tint: #383a3e;
+
+  /** medium **/
+  --color-medium: #777980;
+  --color-medium-rgb: 146, 148, 156;
+  --color-medium-contrast: #ffffff;
+  --color-medium-contrast-rgb: 255, 255, 255;
+  --color-medium-shade: #808289;
+  --color-medium-tint: #9d9fa6;
+
+  /** light **/
+  --color-light: #f7f7f7;
+  --color-light-rgb: 247, 247, 247;
+  --color-light-contrast: #000000;
+  --color-light-contrast-rgb: 0, 0, 0;
+  --color-light-shade: #d7d8da;
+  --color-light-tint: #f5f6f9;
+}
