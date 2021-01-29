@@ -7,12 +7,15 @@ import { HomeComponent } from './views/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationInterceptorModule } from '../services/interceptor/authentication.interceptor.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AuthenticationInterceptorModule,
     AppRoutingModule,
   ],

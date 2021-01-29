@@ -8,13 +8,13 @@ import {
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { StorageService } from '../storage/storage.service';
-import { Router } from '@angular/router';
+import { SessionService } from '../session/session.service';
 
 @Injectable()
 export class AuthenticationInterceptor implements HttpInterceptor {
   constructor(
     private _storageService: StorageService,
-    private _router: Router
+    private _sessionService: SessionService
   ) {}
 
   intercept(
@@ -36,7 +36,7 @@ export class AuthenticationInterceptor implements HttpInterceptor {
         },
         (error: any) => {
           console.log('error', error);
-          this._router.navigate(['/login']);
+          this._sessionService.clearSession();
         }
       )
     );

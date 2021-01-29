@@ -28,12 +28,12 @@ export class ApiService {
     return this._httpClient.post<any>(`${apiUrl}/${this.endPoint}`, body);
   };
 
-  update(body: any): Observable<any> {
+  update = (body: any): Observable<any> => {
     return this._httpClient.put<any>(
       `${apiUrl}/${this.endPoint}/${body.id}`,
       body
     );
-  }
+  };
 
   delete = (id: number): Observable<any> => {
     return this._httpClient.delete<any>(`${apiUrl}/${this.endPoint}/${id}`);
