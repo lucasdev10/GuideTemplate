@@ -1,0 +1,29 @@
+<section class="container">
+  <header class="content-header">
+    <h2>Users</h2>
+    <button>Create User</button>
+  </header>
+  <div>
+    <table id="dataTable">
+      <thead class="table-thead">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody class="table-tbody">
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+          <td>
+            <button>To view</button>
+            <button>Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+<header class="header-menu">
+  <div class="logo">
+    <img src="../../../../assets/images/logo-angular.png" alt="logo" />
+  </div>
+  <nav class="nav-menu">
+    <ul>
+      <li><a routerLink="#">Register1</a></li>
+      <li><a routerLink="#">Register2</a></li>
+      <li><a routerLink="#">Register3</a></li>
+    </ul>
+  </nav>
+  <div class="user-info">
+    <img
+      class="profile"
+      src="../../../../assets/images/blank-profile.png"
+      alt="profile"
+    />
+    <p>Username</p>
+    <img
+      class="icon-exit"
+      src="../../../../assets/icons/exit-outline.svg"
+      alt="icon-exit"
+      title="Exit"
+    />
+    <img
+      class="menu-responsive"
+      src="../../../../assets/icons/reorder-four-outline.svg"
+      alt="menu"
+      (click)="hiddenMenu()"
+    />
+    <span *ngIf="isHiddenMenu" class="menu-phone">
+      <nav>
+        <ul>
+          <li><a routerLink="#">Register1</a></li>
+          <li><a routerLink="#">Register2</a></li>
+          <li><a routerLink="#">Register3</a></li>
+        </ul>
+      </nav>
+    </span>
+  </div>
+</header>
