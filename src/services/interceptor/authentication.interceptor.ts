@@ -12,16 +12,13 @@ import { SessionService } from '../session/session.service';
 
 @Injectable()
 export class AuthenticationInterceptor implements HttpInterceptor {
-  constructor(
-    private _storageService: StorageService,
-    private _sessionService: SessionService
-  ) {}
+  constructor(private _sessionService: SessionService) {}
 
   intercept(
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    const sessionData = this._storageService.getDataLocaleStorage('session');
+    const sessionData = this._sessionService.getDataSessionStorage('session');
 
     request = request.clone({
       setHeaders: {

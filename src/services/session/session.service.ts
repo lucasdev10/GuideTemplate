@@ -8,12 +8,19 @@ import { StorageService } from '../storage/storage.service';
 export class SessionService {
   sessionUserData: any;
 
-  constructor(
-    private _router: Router,
-    private _storageService: StorageService
-  ) {
-    this.sessionUserData = this._storageService.getDataLocaleStorage('session');
+  constructor(private _router: Router) {
+    this.sessionUserData = this.getDataSessionStorage('session');
   }
+
+  getDataSessionStorage = (key: string) => {
+    const data = JSON.parse(sessionStorage.getItem(key)) || null;
+    return data;
+  };
+
+  setDataSessionStorage = (key: string, obj: any) => {
+    const data = sessionStorage.setItem(key, JSON.stringify(obj));
+    return data;
+  };
 
   goLogin = () => {
     this._router.navigate(['/login']);
@@ -25,6 +32,7 @@ export class SessionService {
 
   clearSession = () => {
     this.goLogin();
+    sessionStorage.clear();
     localStorage.clear();
   };
 

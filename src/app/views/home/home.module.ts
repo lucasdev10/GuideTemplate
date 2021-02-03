@@ -7,7 +7,7 @@ import { HomeComponent } from './home.component';
 import { MenuComponent } from '../../components/templates/menu/menu.component';
 import { UsersReadComponent } from 'src/app/components/cruds/users/users-read/users-read.component';
 import { UsersCreateComponent } from '../../components/cruds/users/users-create/users-create.component';
-import { UsersEditComponent } from '../../components/cruds/users/users-edit/users-edit.component';
+import { FooterComponent } from '../../components/templates/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { UsersEditComponent } from '../../components/cruds/users/users-edit/user
     MenuComponent,
     UsersReadComponent,
     UsersCreateComponent,
-    UsersEditComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, HomeRoutingModule],
 })

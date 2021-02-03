@@ -1,15 +1,17 @@
 <section class="container">
   <header class="content-header">
-    <h2>Users</h2>
-    <button>Create User</button>
+    <h2>Users list</h2>
+    <button routerLink="/user" class="btn-default">Create User</button>
   </header>
-  <div>
+  <div class="table">
     <table id="dataTable">
       <thead class="table-thead">
         <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Password</th>
+          <th>City</th>
+          <th>Active?</th>
           <th>Options</th>
         </tr>
       </thead>
@@ -18,9 +20,11 @@
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.password }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.active ? "Yes" : "no" }}</td>
           <td>
-            <button>To view</button>
-            <button>Edit</button>
+            <button class="btn-visualize">Visualize</button>
+            <button routerLink="/user" class="btn-edit">Edit</button>
           </td>
         </tr>
       </tbody>

@@ -7,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersReadComponent implements OnInit {
   users: any = [
-    { name: 'Name', email: 'email@email.com', password: '123456' },
-    { name: 'Name2', email: 'email2@email.com', password: '654321' },
+    {
+      name: 'Name',
+      email: 'email@email.com',
+      password: '123456',
+      city: 'São Paulo',
+      active: true,
+    },
+    {
+      name: 'Name2',
+      email: 'email2@email.com',
+      password: '654321',
+      city: 'São Paulo',
+      active: true,
+    },
   ];
   constructor() {}
 
