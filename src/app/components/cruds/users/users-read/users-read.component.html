@@ -1,7 +1,9 @@
 <section class="container">
   <header class="content-header">
     <h2>Users list</h2>
-    <button routerLink="/user" class="btn-default">Create User</button>
+    <button [routerLink]="['/user', 'register', 0]" class="btn-default">
+      Create User
+    </button>
   </header>
   <div class="table">
     <table id="dataTable">
@@ -16,15 +18,22 @@
         </tr>
       </thead>
       <tbody class="table-tbody">
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let user of usersData">
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.password }}</td>
           <td>{{ user.city }}</td>
           <td>{{ user.active ? "Yes" : "no" }}</td>
           <td>
-            <button class="btn-visualize">Visualize</button>
-            <button routerLink="/user" class="btn-edit">Edit</button>
+            <button
+              [routerLink]="['/user', 'visualize', 0]"
+              class="btn-visualize"
+            >
+              Visualize
+            </button>
+            <button [routerLink]="['/user', 'edit', 0]" class="btn-edit">
+              Edit
+            </button>
           </td>
         </tr>
       </tbody>

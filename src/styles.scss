@@ -48,7 +48,7 @@ img {
   h2 {
     font-weight: bold;
     color: var(--color-light);
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
 
@@ -67,7 +67,7 @@ img {
     background-color: var(--dark);
     text-transform: capitalize;
     color: var(--color-light);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: bold;
   }
 }
@@ -76,7 +76,7 @@ img {
   td {
     border: 2px solid #726f75;
     color: #100f11;
-    font-size: 1.05rem;
+    font-size: 1.05em;
     font-weight: bold;
     background-color: #dddddd;
   }
@@ -148,7 +148,7 @@ img {
     font-weight: bold;
     text-transform: capitalize;
     color: #100f11;
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   input {
@@ -208,7 +208,7 @@ img {
   background-color: var(--info);
   color: var(--color-light);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   z-index: 1;
   cursor: pointer;
   &:hover {
@@ -222,7 +222,7 @@ img {
   background-color: var(--warning);
   color: var(--color-light);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1em;
   cursor: pointer;
   &:hover {
     background-color: #745a0d;
@@ -235,7 +235,7 @@ img {
   background-color: var(--success);
   color: var(--color-light);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1em;
   cursor: pointer;
   &:hover {
     background-color: #10501f;
@@ -252,9 +252,59 @@ img {
   background-color: var(--primary);
   color: var(--color-light);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   cursor: pointer;
   &:hover {
     background-color: #0b325c;
+  }
+}
+
+.box-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0;
+  gap: 0 15px;
+}
+
+.btn-save {
+  padding: 10px 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: var(--color-light);
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  &:hover {
+    background-color: #0b325c;
+  }
+}
+
+.btn-delete {
+  padding: 10px 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--danger);
+  color: var(--color-light);
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  &:hover {
+    background-color: #8a1722;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-header h2 {
+    font-size: 1.3em;
+  }
+
+  table.dataTable {
+    padding-right: 10%;
   }
 }

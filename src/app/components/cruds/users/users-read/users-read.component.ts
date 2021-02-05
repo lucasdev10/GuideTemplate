@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserControllerService } from '../../../../../services/controllers/user-controller.service';
 
 @Component({
   selector: 'app-users-read',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-read.component.scss'],
 })
 export class UsersReadComponent implements OnInit {
-  users: any = [
+  usersData: any = [
     {
       name: 'Name',
       email: 'email@email.com',
@@ -22,11 +23,18 @@ export class UsersReadComponent implements OnInit {
       active: true,
     },
   ];
-  constructor() {}
+  constructor(private _userController: UserControllerService) {}
 
   ngOnInit(): void {
-    this.dataTableConfig();
+    this.getAllUsers();
   }
+
+  getAllUsers = () => {
+    this.dataTableConfig();
+    return this._userController.handlerController('getAll').subscribe((res) => {
+      this.usersData = res;
+    });
+  };
 
   dataTableConfig = () => {
     $(document).ready(function () {

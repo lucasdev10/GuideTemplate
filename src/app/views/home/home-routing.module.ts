@@ -11,7 +11,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'users', component: UsersReadComponent },
-      { path: 'user', component: UsersCreateComponent },
+      { path: 'user/:option/:id', component: UsersCreateComponent },
     ],
   },
 ];
