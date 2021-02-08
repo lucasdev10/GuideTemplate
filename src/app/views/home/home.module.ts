@@ -9,6 +9,9 @@ import { UsersReadComponent } from 'src/app/components/cruds/users/users-read/us
 import { UsersCreateComponent } from '../../components/cruds/users/users-create/users-create.component';
 import { FooterComponent } from '../../components/templates/footer/footer.component';
 import { ModalComponent } from '../../components/utils/modal/modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from '../../components/utils/loader/loader.component';
+import { ToastComponent } from '../../components/utils/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ModalComponent } from '../../components/utils/modal/modal.component';
     UsersCreateComponent,
     ModalComponent,
     FooterComponent,
+    LoaderComponent,
+    ToastComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, HomeRoutingModule],
+  providers: [ModalComponent],
 })
 export class HomeModule {}

@@ -1,0 +1,19 @@
+.toast-content {
+  position: fixed;
+  top: 35vh;
+  left: calc(50% - 17.5vw);
+  z-index: 15;
+  background-color: var(--dark);
+  padding: 20px;
+  min-width: 35vw;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px #888888;
+
+  h3 {
+    text-align: center;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,16 @@
+.buttons-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-model {
+  margin: 20px 10px;
+  padding: 5px;
+  background-color: var(--info);
+  color: var(--light);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

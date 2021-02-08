@@ -80,11 +80,12 @@
 }
 
 .modal-form-group {
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: var(--dark);
+  margin-bottom: 5px;
 
   label {
     font-weight: bold;
@@ -95,7 +96,7 @@
     width: 100%;
     background-color: #dadada;
     border-radius: 5px;
-    color: #fff;
+    color: #616161;
     padding: 8px 20px;
     border: 1px solid #616161;
   }

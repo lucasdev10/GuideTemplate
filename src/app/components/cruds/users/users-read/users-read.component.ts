@@ -1,5 +1,7 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { UserControllerService } from '../../../../../services/controllers/user-controller.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-users-read',
@@ -56,6 +58,45 @@ export class UsersReadComponent implements OnInit {
         //   },
         // },
       });
+    });
+  };
+
+  // MODAL CONFIGS
+  configModal: any;
+
+  openModal = () => {
+    return new Observable((observer) => {
+      const config = {
+        open: true,
+        title: 'Available user',
+        configInputs: [{ title: 'name', type: 'text' }],
+      };
+      observer.next(config);
+    }).subscribe((res) => {
+      this.configModal = res;
+    });
+  };
+
+  handlerResultModal = (dataResult: any) => {
+    return console.log(dataResult);
+  };
+
+  // LOADER
+  loader: boolean = false;
+  openLoader = () => {
+    this.loader = true;
+    setTimeout(() => {
+      this.loader = false;
+    }, 5000);
+  };
+
+  // TOAST
+  toastConfig: any;
+  openToast = () => {
+    return (this.toastConfig = {
+      open: true,
+      message: 'Success!',
+      timer: 2000,
     });
   };
 }

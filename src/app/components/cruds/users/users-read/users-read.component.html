@@ -39,4 +39,21 @@
       </tbody>
     </table>
   </div>
+  <div class="buttons-box">
+    <button class="btn-model" (click)="openModal()">Open modal</button>
+    <button class="btn-model" (click)="openLoader()">Open loader</button>
+    <button class="btn-model" (click)="openToast()">Open toast</button>
+  </div>
 </section>
+
+<!-- MODAL -->
+<app-modal
+  [config]="configModal"
+  (dataResult)="handlerResultModal($event)"
+></app-modal>
+
+<!-- LOADER -->
+<app-loader [hidden]="!loader"></app-loader>
+
+<!-- TOAST -->
+<app-toast [configToast]="toastConfig"></app-toast>

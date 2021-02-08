@@ -1,16 +1,26 @@
-<section class="modal-container">
+<section class="modal-container" *ngIf="config?.open">
   <header class="modal-header">
-    <h2>Title</h2>
-    <img src="../../../../assets/icons/close.svg" alt="close" />
+    <h2>{{ config?.title }}</h2>
+    <img
+      src="../../../../assets/icons/close.svg"
+      alt="close"
+      (click)="closeModal()"
+    />
   </header>
   <form class="modal-form">
-    <div class="modal-form-group">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" placeholder="Insert name:" />
+    <div class="modal-form-group" *ngFor="let item of config?.configInputs">
+      <label [for]="item.title">{{ item.title }}:</label>
+      <input
+        [type]="item.type"
+        [name]="item.title"
+        [id]="item.title"
+        [placeholder]="'Insert ' + item.title"
+        [(ngModel)]="data[item.title]"
+      />
     </div>
   </form>
   <footer class="modal-footer">
-    <button class="btn-confirm">Confirm</button>
-    <button class="btn-cancel">Cancel</button>
+    <button (click)="clickEventHandler()" class="btn-confirm">Confirm</button>
+    <button (click)="closeModal()" class="btn-cancel">Cancel</button>
   </footer>
 </section>
