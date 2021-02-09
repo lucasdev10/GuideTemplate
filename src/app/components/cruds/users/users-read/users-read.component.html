@@ -43,6 +43,7 @@
     <button class="btn-model" (click)="openModal()">Open modal</button>
     <button class="btn-model" (click)="openLoader()">Open loader</button>
     <button class="btn-model" (click)="openToast()">Open toast</button>
+    <button class="btn-model" (click)="openAlert()">Open alert</button>
   </div>
 </section>
 
@@ -57,3 +58,9 @@
 
 <!-- TOAST -->
 <app-toast [configToast]="toastConfig"></app-toast>
+
+<!-- ALERT -->
+<app-alert
+  [alertConfig]="alertConfig"
+  (responseButton)="handlerResultAlert($event)"
+></app-alert>

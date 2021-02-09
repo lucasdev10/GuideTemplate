@@ -27,10 +27,12 @@ export class ToastComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    this.configToast.open = true;
-    setTimeout(() => {
-      this.configToast.open = false;
-      this.configToast.message = null;
-    }, this.configToast.timer);
+    if (this.configToast) {
+      this.configToast.open = true;
+      setTimeout(() => {
+        this.configToast.open = false;
+        this.configToast.message = null;
+      }, this.configToast.timer);
+    }
   }
 }

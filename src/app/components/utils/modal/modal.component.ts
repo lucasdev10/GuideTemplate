@@ -19,8 +19,7 @@ export class ModalComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.config);
-    this.config.configInputs.map((config, index) => {
+    this.config?.configInputs.map((config, index) => {
       this.data[config.title] = null;
     });
   }

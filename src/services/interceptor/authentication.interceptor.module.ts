@@ -8,11 +8,11 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
   imports: [CommonModule],
   providers: [
     AuthenticationInterceptor,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthenticationInterceptor,
-      multi: true,
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthenticationInterceptor,
+    //   multi: true,
+    // },
   ],
 })
 export class AuthenticationInterceptorModule {}

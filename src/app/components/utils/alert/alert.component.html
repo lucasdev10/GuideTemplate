@@ -1,0 +1,13 @@
+<span class="alert-container" *ngIf="alertConfig?.open">
+  <img
+    class="image-span"
+    [src]="'../../../../assets/alertImages/' + alertConfig?.icon + '.png'"
+    alt=""
+  />
+  <h2 class="title-alert">{{ alertConfig?.title }}</h2>
+  <p class="description-alert">{{ alertConfig?.description }}</p>
+  <div class="box-buttons" *ngIf="alertConfig?.icon === 'alert'">
+    <button class="btn-confirm" (click)="handlerButton(true)">Confirm</button>
+    <button class="btn-cancel" (click)="handlerButton(false)">Cancel</button>
+  </div>
+</span>

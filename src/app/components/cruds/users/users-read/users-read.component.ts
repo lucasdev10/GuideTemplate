@@ -99,4 +99,31 @@ export class UsersReadComponent implements OnInit {
       timer: 2000,
     });
   };
+
+  // ALERT
+  alertConfig: any;
+  openAlert = () => {
+    return (this.alertConfig = {
+      open: true,
+      title: 'Are you sure?',
+      description: "You won't be able to revert this!",
+      icon: 'alert',
+    });
+  };
+
+  handlerResultAlert = (response: boolean) => {
+    if (response === true) {
+      this.alertConfig = {
+        open: true,
+        title: 'Successfully confirmed!',
+        icon: 'success',
+      };
+    } else {
+      this.alertConfig = {
+        open: true,
+        title: 'Error! It was not possible to continue with the operation.',
+        icon: 'error',
+      };
+    }
+  };
 }

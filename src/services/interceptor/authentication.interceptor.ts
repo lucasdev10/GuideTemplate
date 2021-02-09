@@ -7,7 +7,6 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { StorageService } from '../storage/storage.service';
 import { SessionService } from '../session/session.service';
 
 @Injectable()
@@ -22,7 +21,7 @@ export class AuthenticationInterceptor implements HttpInterceptor {
 
     request = request.clone({
       setHeaders: {
-        Authorization: `Bearer ${sessionData.accessToken}`,
+        Authorization: `Bearer ${sessionData?.accessToken}`,
       },
     });
 

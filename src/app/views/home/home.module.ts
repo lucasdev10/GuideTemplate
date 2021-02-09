@@ -12,6 +12,7 @@ import { ModalComponent } from '../../components/utils/modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderComponent } from '../../components/utils/loader/loader.component';
 import { ToastComponent } from '../../components/utils/toast/toast.component';
+import { AlertComponent } from '../../components/utils/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ToastComponent } from '../../components/utils/toast/toast.component';
     FooterComponent,
     LoaderComponent,
     ToastComponent,
+    AlertComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, HomeRoutingModule],
   providers: [ModalComponent],
