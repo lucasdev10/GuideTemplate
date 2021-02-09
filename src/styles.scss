@@ -300,6 +300,18 @@ img {
   }
 }
 
+.input-required {
+  color: #ca0000;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0 2px;
+}
+
+button:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 @media (max-width: 768px) {
   .content-header h2 {
     font-size: 1.3em;

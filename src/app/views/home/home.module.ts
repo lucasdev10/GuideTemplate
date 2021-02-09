@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoaderComponent } from '../../components/utils/loader/loader.component';
 import { ToastComponent } from '../../components/utils/toast/toast.component';
 import { AlertComponent } from '../../components/utils/alert/alert.component';
+import { HandlerFormErrorComponent } from '../../components/utils/handlerFormError/handlerFormError.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AlertComponent } from '../../components/utils/alert/alert.component';
     LoaderComponent,
     ToastComponent,
     AlertComponent,
+    HandlerFormErrorComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, HomeRoutingModule],
   providers: [ModalComponent],

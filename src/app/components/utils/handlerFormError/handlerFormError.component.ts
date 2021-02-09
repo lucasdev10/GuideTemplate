@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HandlerFormError } from './handlerFormError';
 
@@ -7,13 +7,11 @@ import { HandlerFormError } from './handlerFormError';
   templateUrl: './handlerFormError.component.html',
   styleUrls: ['./handlerFormError.component.scss'],
 })
-export class HandlerFormErrorComponent implements OnInit {
+export class HandlerFormErrorComponent {
   @Input() control: FormControl;
   @Input() label: string;
 
   constructor() {}
-
-  ngOnInit() {}
 
   get errorMessage() {
     try {
